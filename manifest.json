@@ -1,0 +1,18 @@
+{
+    "name" : "Youtube Video Downloader",
+    "description" : "Download youtube videos simpler than before.",
+    "version" : "0.1",
+    "author" : "Aditya V Singh",
+    "manifest_version" : 3,
+    "web_accessible_resources" : [{
+        "resources": [ "src/youtubedl.js" ],
+        "matches": [ "<all_urls>" ]
+            
+    }],
+    "content_scripts" : [
+        {
+            "matches" : ["https://www.youtube.com/watch*"],
+            "js" : ["src/loader.js"]
+        }
+    ]
+}
